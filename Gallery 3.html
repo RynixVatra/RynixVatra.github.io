@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="Gallery 3.css" />
+    <title>Gallery</title>
+
+  </head>
+  <body>
+    
+    
+      <!-- Animated background -->
+      <style>
+        body{
+          background-color: rgb(68, 74, 54);
+
+          
+        }
+      </style>
+      <!-- Animated background End -->
+      
+    <div class="container">
+      <h1>Gallery X TKJ</h1>
+
+
+      <div class="image-container">
+        <div class="image"><img src="Img/Bersama1.jpg" /></div>
+        <div class="image"><img src="Img/Bersama2.jpg" /></div>
+        <div class="image"><img src="Img/Bersama3.jpg" /></div>
+        <div class="image"><img src="Img/Bersama4.jpg" /></div>
+        <div class="image"><img src="Img/Bersama5.jpg" /></div>
+        <div class="image"><img src="Img/Bersama6.jpg" /></div>
+        <div class="image"><img src="Img/Aib1.jpg" /></div>
+        <div class="image"><img src="Img/Aib2.jpg" /></div>
+        <div class="image"><img src="Img/Aib3.jpg" /></div>
+        <div class="image"><img src="Img/Aib4.jpg" /></div>
+        <div class="image"><img src="Img/Kull1.jpg" /></div>
+      </div>
+
+        <div class="popup-image">
+          <span>&times;</span>
+          <img src="Img/Kull1.jpg" />
+        </div>
+      </div>
+
+      <script>
+        document.querySelectorAll(".image-container img").forEach((image) => {
+          image.onclick = () => {
+            document.querySelector(".popup-image").style.display = "block";
+            document.querySelector(".popup-image img").src = image.getAttribute("src");
+          };
+        });
+
+        document.querySelector(".popup-image span").onclick = () => {
+          document.querySelector(".popup-image").style.display = "none";
+        };
+      </script>
+    </div>
+  </body>
+</html>
